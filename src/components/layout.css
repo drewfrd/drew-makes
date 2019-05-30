@@ -40,6 +40,7 @@ template {
   display: none;
 }
 a {
+  color: rgb(43 43 43);
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -61,7 +62,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0;
 }
 mark {
@@ -234,7 +235,7 @@ h1 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 1.3rem;
   line-height: 1.1;
 }
 h2 {
@@ -333,6 +334,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
+  list-style-type: none;
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -618,5 +620,46 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+
+
+
+.card-color {
+  background-color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.underline {
+  text-decoration: underline;
+}
+.no-underline {
+  text-decoration: none;
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotation .5s infinite cubic-bezier(.42, 0, .58, 1);
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
